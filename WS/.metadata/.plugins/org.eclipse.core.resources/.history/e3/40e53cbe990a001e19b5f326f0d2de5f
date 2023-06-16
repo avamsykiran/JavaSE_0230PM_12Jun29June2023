@@ -1,0 +1,5 @@
+package com.cts.exceptionsdemo.model;
+
+public class BankAccount {
+
+}

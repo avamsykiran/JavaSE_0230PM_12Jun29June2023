@@ -1,0 +1,29 @@
+package com.cts.collectionsdemo;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.cts.collectionsdemo.model.Employee;
+
+public class App1 {
+
+	public static void main(String[] args) {
+
+		List<Employee> emps = new ArrayList<>();
+		
+		emps.add(new Employee(101,"Vamsy",7890.0,LocalDate.now().minusYears(2)));
+		emps.add(new Employee(103,"Aruna",5890.0,LocalDate.now().minusYears(1)));
+		emps.add(new Employee(111,"Zeenath",7890.0,LocalDate.now().minusYears(1)));
+		emps.add(new Employee(231,"Ooha",1890.0,LocalDate.now().minusMonths(2)));
+		emps.add(new Employee(102,"Sameera",2290.0,LocalDate.now().minusMonths(1)));
+		emps.add(new Employee(110,"Bhanu",4490.0,LocalDate.now().minusMonths(3)));
+		emps.add(new Employee(109,"Akhila",6690.0,LocalDate.now().minusMonths(5)));
+		emps.add(new Employee(106,"Suman",2290.0,LocalDate.now().minusYears(12)));
+		emps.add(new Employee(104,"Amith",8890.0,LocalDate.now().minusYears(6)));
+		emps.add(new Employee(121,"Charles",1190.0,LocalDate.now().minusMonths(12)));
+		
+		System.out.println(emps);
+	}
+
+}

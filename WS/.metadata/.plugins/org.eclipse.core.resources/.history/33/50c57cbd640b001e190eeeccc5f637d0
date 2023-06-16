@@ -1,0 +1,43 @@
+package com.cts.multithreadingdemo.thread;
+
+import java.util.stream.Stream;
+
+import com.cts.multithreadingdemo.model.Bus;
+import com.cts.multithreadingdemo.service.BusReservationService;
+import com.cts.multithreadingdemo.service.BusReservationServiceImpl;
+
+public class BusReservationRunnable implements Runnable {
+
+	private Bus bus;
+	private int seatsNeeded;
+	private  seatsReserved[];
+
+	private BusReservationService busService;
+
+	public BusReservationRunnable(Bus bus, int seatsNeeded) {
+		super();
+		this.bus = bus;
+		this.seatsNeeded = seatsNeeded;
+		this.seatsReserved = new int[seatsNeeded];
+		this.busService = new BusReservationServiceImpl(null);
+	}
+
+	@Override
+	public void run() {
+		Thread thread = Thread.currentThread();
+		String threadName = thread.getName();
+
+		for (int i = 0; i < seatsNeeded && busService.isASeatAvailable(); i++) {
+			seatsReserved[i] = busService.reserveASeat();
+			try {
+				thread.sleep(500);
+			} catch (InterruptedException exp) {
+				exp.printStackTrace();
+			}
+		}
+		
+		System.out.println("Seats reserved for "+threadName);
+		Stream.of(seatsReserved).forEach(System.out::println);
+	}
+
+}

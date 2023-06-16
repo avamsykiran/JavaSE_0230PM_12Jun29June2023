@@ -1,0 +1,18 @@
+package com.cts.app01.ui;
+
+import java.util.Scanner;
+
+public class UI02 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		
+		//accept the p,t, and r of a loan and display the emi 
+		
+		
+		
+		scan.close();;
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.cts.multithreadingdemo;
+
+import com.cts.multithreadingdemo.model.Bus;
+import com.cts.multithreadingdemo.thread.BusReservationRunnable;
+
+public class App02 {
+
+	public static void main(String[] args) {
+		
+		Bus bus = new Bus(25);
+		
+		Thread t1 = new Thread(new BusReservationRunnable(bus, 10), "RAMA");
+		Thread t2 = new Thread(new BusReservationRunnable(bus, 10), "RAGHAV");
+		Thread t3 = new Thread(new BusReservationRunnable(bus, 10), "RAJIV");
+		
+		t1.start();
+		t2.start();
+		t3.start();
+		
+	}
+}

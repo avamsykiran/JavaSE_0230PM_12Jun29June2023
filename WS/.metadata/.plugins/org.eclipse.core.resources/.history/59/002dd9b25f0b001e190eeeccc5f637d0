@@ -1,0 +1,17 @@
+package com.cts.multithreadingdemo;
+
+import com.cts.multithreadingdemo.thread.NumberSeriesRunnable;
+
+public class App1 {
+
+	public static void main(String[] args) {
+		Thread t1 = new Thread(new NumberSeriesRunnable(100, 120), "threadOne");
+		Thread t2 = new Thread(new NumberSeriesRunnable(200, 220), "threadOne");
+		Thread t3 = new Thread(new NumberSeriesRunnable(300, 320), "threadOne");
+
+		t1.start();
+		t2.start();
+		t3.start();
+	}
+
+}

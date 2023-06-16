@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.Period"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="java.net.UnknownServiceException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.cts.exceptionsdemo.model.BankAccount"/>
+    <fullyQualifiedTypeName name="java.lang.StackWalker.Option"/>
+    <fullyQualifiedTypeName name="com.cts.exceptionsdemo.service.BankingService"/>
+    <fullyQualifiedTypeName name="com.cts.exceptionsdemo.service.BankingServiceImpl"/>
+    <fullyQualifiedTypeName name="com.cts.exceptionsdemo.exception.WithdrawException"/>
+    <fullyQualifiedTypeName name="com.cts.exceptionsdemo.exception.DepositeException"/>
+    <fullyQualifiedTypeName name="com.cts.multithreadingdemo.thread.NumberSeriesRunnable"/>
+    <fullyQualifiedTypeName name="com.cts.multithreadingdemo.model.Bus"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="com.cts.multithreadingdemo.service.BusReservationService"/>
+    <fullyQualifiedTypeName name="com.cts.multithreadingdemo.service.BusReservationServiceImpl"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="com.cts.multithreadingdemo.thread.BusReservationRunnable"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="com.cts.collectionsdemo.model.Employee"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.LinkedHashSet"/>
+    <fullyQualifiedTypeName name="java.util.TreeSet"/>
+    <fullyQualifiedTypeName name="com.cts.collectionsdemo.comparators.EmployeeFullNameComparator"/>
+</qualifiedTypeNameHistroy>

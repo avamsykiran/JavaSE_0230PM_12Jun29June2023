@@ -1,0 +1,21 @@
+package com.cts.exceptionsdemo.service;
+
+import com.cts.exceptionsdemo.exception.DepositeException;
+import com.cts.exceptionsdemo.exception.WithdrawException;
+import com.cts.exceptionsdemo.model.BankAccount;
+
+public class BankingServiceImpl implements BankingService {
+
+	@Override
+	public void deposit(BankAccount account, double amount) throws DepositeException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void withdraw(BankAccount account, double amount) throws WithdrawException {
+		// TODO Auto-generated method stub
+
+	}
+
+}

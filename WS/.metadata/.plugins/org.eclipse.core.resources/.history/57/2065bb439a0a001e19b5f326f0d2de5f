@@ -1,0 +1,5 @@
+package com.cts.exceptionsdemo.exceptions;
+
+public class WithdrawException extends Exception {
+
+}

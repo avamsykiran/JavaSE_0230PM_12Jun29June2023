@@ -1,0 +1,23 @@
+package com.cts.multithreadingdemo.service;
+
+public class BusReservationServiceImpl implements BusReservationService {
+
+	@Override
+	public boolean isASeatAvailable() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isBusFull() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int reserveASeat() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
