@@ -252,3 +252,88 @@ Multi Threading
             java.lang.Comparable
 
             java.util.Collections
+
+    Case Study Assignment 
+    --------------------------------------------------------------------------------
+
+        Develop a console application that is menu driven to perform add, retriving, and deleting Employee
+        object from a list.
+
+            com.cts.hrapp
+                    HRApp.java
+                    HRMenu.java (ADD,LIST,FIND,DELETE,QUIT)
+            com.cts.hrapp.model
+                    Employee.java
+            com.cts.hrapp.dao
+                    EmployeeDao.java
+                    EmployeeDaoImpl.java        //we will have to perform operations on a list
+            com.cts.hrapp.service
+                    EmployeeService
+                    EmployeeServiceImpl.java    //we will have to validate data before passing it to dao
+            com.cts.hrapp.exception
+                    EmployeeException.java
+
+    Functional Interfaces and Lambda Expressions
+
+        Functional Interfaces
+            Supplier
+            Consumer
+            Predicate
+            Functional
+
+        java.util.function 
+
+        a lambda expression is an inline implementation of a functional interface.
+
+        FunctonalInterface obj1 = (paramsList) -> returnValue ;
+
+        FunctonalInterface obj2 = oneParam -> returnValue ;
+
+        FunctonalInterface obj3 = (paramsList) -> {
+            
+            /*************
+                implementation code
+            *******************/
+
+            return  returnValue ;
+        }
+
+    Streams API
+
+        java.util.stream
+
+                    Stream
+
+                        is a flow of data and can facilitate execution of a chain of 
+                        operations on that data.
+
+                        Stream s1 = empList.stream();
+                        Stream s2 = empSet.stream();
+                        Stream s3 = Stream.of(empArray);
+
+                        Integer[] nums = new Integer[]{1,2,3,4,5,6,7,8,9};
+
+                        filter      that accepts a predicate, and returns a new stream that contians those elements
+                                        for those the predicate returns true. (intermidiate operation)
+
+                                    Streams stream1 = Stream.of(nums).filter( n -> x%2==0);
+                        
+                        map         that accepts a transformer (accepts an x and returns a y), and returns a new stream
+                                        of all resutls of the transformer for each element in the original stream.
+                                        (intermidiate operation)
+
+                                    Streams stream2 = Stream.of(nums).map( n -> n*n );
+
+                        reduce      that accepts a binaryOperator, that binaryoperator is executed on each pair
+                                    of elements until the whole stream is reduced to one single value and 
+                                    that value is returned. (terminal operation)
+
+                                    int s = Stream.of(nums).reduce( (a,b) -> a+b ); //45
+
+                        forEach     that accepts a consumer, and executes the consuemr on each ele of the stream,
+                                    and has no return and hence called a terminal operation.
+                        
+                        collect     is sued to collect all the elements in stream into a list or set or an array.
+
+                        
+                        
