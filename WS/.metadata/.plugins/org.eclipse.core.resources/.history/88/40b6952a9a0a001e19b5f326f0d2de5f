@@ -1,5 +1,0 @@
-package com.cts.exceptionsdemo.exception;
-
-public class DepositeException extends Exception {
-
-}

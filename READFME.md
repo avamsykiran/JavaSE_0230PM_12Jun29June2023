@@ -272,6 +272,26 @@ Multi Threading
                     EmployeeServiceImpl.java    //we will have to validate data before passing it to dao
             com.cts.hrapp.exception
                     EmployeeException.java
+    
+    Case Study Assignment 
+    --------------------------------------------------------------------------------
+
+        Develop a console application that is menu driven to perform add, retriving, and deleting Employee
+        object from a list.
+
+            com.cts.hrapp
+                    HRApp.java
+                    HRMenu.java (ADD,LIST,FIND,DELETE,QUIT)
+            com.cts.hrapp.model
+                    Employee.java
+            com.cts.hrapp.dao
+                    EmployeeDao.java
+                    EmployeeDaoImpl.java        //we will have to perform operations on a list
+            com.cts.hrapp.service
+                    EmployeeService
+                    EmployeeServiceImpl.java    //we will have to validate data before passing it to dao
+            com.cts.hrapp.exception
+                    EmployeeException.java
 
     Functional Interfaces and Lambda Expressions
 
@@ -335,5 +355,178 @@ Multi Threading
                         
                         collect     is sued to collect all the elements in stream into a list or set or an array.
 
-                        
-                        
+    Case Study Assignment 
+    --------------------------------------------------------------------------------
+
+        Develop a console application that is menu driven to perform add, retriving, and deleting Employee
+        object from a list. (use streams wherever possible)
+
+            com.cts.hrapp
+                    HRApp.java
+                    HRMenu.java (ADD,LIST,serachByName,searchByJoinDate,seniorMostEmployee,juniorMostEmployee,
+                                        listOnlyNames,DELETE,QUIT)
+            com.cts.hrapp.model
+                    Employee.java
+            com.cts.hrapp.dao
+                    EmployeeDao.java
+                    EmployeeDaoImpl.java        //we will have to perform operations on a list
+            com.cts.hrapp.service
+                    EmployeeService
+                    EmployeeServiceImpl.java    //we will have to validate data before passing it to dao
+            com.cts.hrapp.exception
+                    EmployeeException.java
+                       
+    
+    IO Streams
+
+        Data flow from input output devices.
+
+        java.io
+
+            InputStream
+                FileInputStream
+                ObjectInputStream
+
+            OutputStream
+                FileOutputStream
+                ObjectOutputStream
+                PrintStream
+
+            Reader
+                FileReader
+                InputStreamReader
+                BufferedReader
+ 
+            Writer
+                PrintWriter
+                FileWriter
+
+            File
+            FileNotFoundException
+            IOException
+
+        java.nio
+            Path
+            Paths
+            Files
+            Directories
+
+    Case Study Assignment 
+    --------------------------------------------------------------------------------
+
+        Develop a console application that is menu driven to perform add, retriving, and deleting Employee
+        object from a list. (use streams wherever possible)
+
+            com.cts.hrapp
+                    HRApp.java
+                    HRMenu.java (ADD,LIST,serachByName,searchByJoinDate,seniorMostEmployee,juniorMostEmployee,
+                                        listOnlyNames,DELETE,QUIT)
+            com.cts.hrapp.model
+                    Employee.java
+            com.cts.hrapp.dao
+                    EmployeeDao.java
+                    EmployeeDaoImpl.java        //we will have to perform operations on a list and 
+                                                //serializ and deserialize that list into a binary file.
+            com.cts.hrapp.service
+                    EmployeeService
+                    EmployeeServiceImpl.java    //we will have to validate data before passing it to dao
+            com.cts.hrapp.exception
+                    EmployeeException.java
+                       
+    Assignment
+    --------------------------------------------------------------------------------
+
+    Consider the below file:
+
+        Transactions.csv
+        2023-06-01,Salary,75000,CREDIT
+        2023-06-02,Rent,5000,DEBIT
+        2023-06-02,Car Wash,1500,DEBIT
+        2023-06-03,Internet,500,DEBIT
+        2023-06-04,Brthday Party,3000,DEBIT
+        2023-06-05,Electricity Bill,1000,DEBIT
+        2023-06-07,LPG Gas,1000,DEBIT
+        2023-06-08,Bonus,85000,CREDIT
+        2023-06-10,Medical,7000,DEBIT
+        2023-06-11,Outside Dine,5000,DEBIT
+        2023-06-15,Grocessaries,8500,DEBIT
+        2023-06-04,Mobile Bill,300,DEBIT
+        2023-06-03,Car EMI,15000,DEBIT
+
+        1. create List<Transaction> txns from the data
+        2. sort this on the transaction date                Collectiosn.sort, Comparator
+        3. auto generate transactionId                      Stream :: forEach
+        4. compute totalCredit, totalDebit and balance      Stream :: filter, Stream :: map and Stream :: reduce
+        5. Print the account statement                      Stream :: forEach 
+
+        DO NOT USE ANY LOOPS. 
+
+
+    JDBC - Java Database Connectivity
+    ---------------------------------------------------------------------------------
+
+    DB  <-----> DRIVER <--------> JDBC  <--------> APP
+
+    JDBC
+        is a abstract specification providced by java for database connectivity.
+
+    DRIVER
+        is the implementation of JDBC
+
+    java.sql
+
+        Connection con = DriverManager.getConnection("dbUrl","uid","pwd");
+
+                Statement st = con.createStatement();
+                
+                        boolean isDone = st.execute(sqlQuery);                  //DDL Create/Alter/Drop ..etc.,
+                        int rowsAffected = st.executeUpdate(sqlQuery);          //DML insert/update/delete
+                        ResultSet rs = st.executeQuery(sqlQuery);               //DRL select
+                
+                        does not support query parameters
+
+                PreparedStatement pst = con.prepareStatement(sqlQuery)
+
+                        boolean isDone = st.execute();                  //DDL Create/Alter/Drop ..etc.,
+                        int rowsAffected = st.executeUpdate();          //DML insert/update/delete
+                        ResultSet rs = st.executeQuery();               //DRL select
+
+                        supports query parameters
+
+                ResultSet
+                    to receive the data returned by the "SELECT".
+
+                    getter methods to recive data to whihc either the column name or
+                    column number msut be givne as argument.
+
+                        rs.getInt(1);       //get the value of 1st col as an integer
+                        rs.getString(5)     //get the value of 5th col as a string ....etc.,
+
+                        rs.getDouble("sal");
+                        rs.getDate("dob");
+
+                    ResultSet has navigtion mehtod to move form one rwo to another 
+                        boolean next()
+                        and it returns false after the last row.
+
+ Case Study Assignment 
+--------------------------------------------------------------------------------
+
+        Develop a console application that is menu driven to perform add, retriving, and deleting Employee
+        object from a list. (use streams where ever possible)
+
+            com.cts.hrapp
+                    HRApp.java
+                    HRMenu.java (ADD,LIST,,DELETE,QUIT)
+            com.cts.hrapp.model
+                    Employee.java
+            com.cts.hrapp.dao
+                    EmployeeDao.java
+                    EmployeeDaoImpl.java        //jdbc implmentation
+            com.cts.hrapp.service
+                    EmployeeService
+                    EmployeeServiceImpl.java    //we will have to validate data before passing it to dao
+            com.cts.hrapp.exception
+                    EmployeeException.java
+
+    
